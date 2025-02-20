@@ -44,6 +44,6 @@ In this branch, we merged CSV files without applying any resampling strategy. Th
    - Apply resampling strategies (downsampling, aggregations, etc.)
 
 ---
-### **Next Steps**
+##  Next Steps 🚀
 - Need an optimal resampling strategy to reduce data volume while preserving meaningful information. 
 - Determining appropriate sampling intervals for different physiological signals. ⏲️
