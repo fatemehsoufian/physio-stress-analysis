@@ -3,7 +3,7 @@
 ## Branch Overview
 In this branch, we merged CSV files without applying any resampling strategy. The following Python files are included:
 
-### 🗂️ **Python Files and Their Functions**
+### **Python Files and Their Functions** 🗂️
 
 1. **extract.py**
    - Contains the `extract` function, which iterates over files to unzip all ZIP archives.
