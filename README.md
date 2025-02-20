@@ -44,6 +44,14 @@ In this branch, we merged CSV files without applying any resampling strategy. Th
    - Apply resampling strategies (downsampling, aggregations, etc.)
 
 ---
+## Unifying Sampling Rates ⏳
+
+- **Downsampling:** Calculate the Greatest Common Divisor (GCD) for a new sampling rate.
+  - **Issue:** Reduces data size, leading to loss of information.
+- **Oversampling:** Calculate the Least Common Multiple (LCM) for a new sampling rate.
+  - **Issue:** Increases data size, requiring more processing time.
+
+---
 ##  Next Steps 🚀
 - Need an optimal resampling strategy to reduce data volume while preserving meaningful information. 
 - Determining appropriate sampling intervals for different physiological signals. ⏲️
