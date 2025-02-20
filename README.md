@@ -51,6 +51,16 @@ In this branch, we merged CSV files without applying any resampling strategy. Th
 - **Oversampling:** Calculate the Least Common Multiple (LCM) for a new sampling rate.
   - **Issue:** Increases data size, requiring more processing time.
 
+
+| Signal      | Signal_code | Frequecy(Hz)|
+| ----------- | ----------- | ----------- |
+| Heart Rate  | HR | 1.0 |
+| Electrodermal Activity   | EDA | 4.0 |
+| Skin Temperature   | TEMP | 4.0 |
+| Accelerometer   | ACC | 32.0 |
+| Inter-Beat Interval   | IBI | 64.0 |
+| Blood Volume Pulse   | BVP | 64.0 |
+
 ---
 ##  Next Steps 🚀
 - Need an optimal resampling strategy to reduce data volume while preserving meaningful information. 
