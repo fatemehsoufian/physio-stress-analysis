@@ -23,11 +23,11 @@ def merge_all():
                         csv_file = file.path
                         add_timestamp_and_id_to_csv(csv_file,nurse)
 
-# extract(".")
-# merge_all()
-# remove_subfolders()
-# delete_ibi_and_tags_files("dmp-dataset\Stress_dataset")
-# resampling()
+extract(".")
+merge_all()
+remove_subfolders()
+delete_ibi_and_tags_files("dmp-dataset\Stress_dataset")
+resampling()
 integrate_data()
 
 # original = pd.read_csv("D:\dmp-dataset\Stress_dataset\ACC_1.csv")

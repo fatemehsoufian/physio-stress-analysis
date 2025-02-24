@@ -1,7 +1,7 @@
 import pandas as pd
 import glob
 
-prefixes = ["EDA", "HR", "IBI", "BVP", "ACC", "TEMP"]
+prefixes = ["EDA", "HR", "BVP", "ACC", "TEMP"]
 
 def concat_data(metric):
 
@@ -11,7 +11,7 @@ def concat_data(metric):
     with open(output_file, "w",newline='') as outfile:
         header_written = False  # Track if the header is written
 
-        csv_files = glob.glob(f"dmp-dataset\Stress_dataset\{metric}_*.csv")
+        csv_files = glob.glob(f"D:/DM/dmp-dataset/Resampled/resampled_{metric}_*.csv")
 
         if csv_files:
             for file in csv_files:
