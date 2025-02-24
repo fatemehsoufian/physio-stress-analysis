@@ -26,3 +26,13 @@ def remove_subfolders():
             shutil.rmtree(dirpath)
 
     print("CSV files moved and renamed, non-CSV folders deleted.")
+
+def delete_ibi_and_tags_files(directory):
+    for filename in os.listdir(directory):
+        if filename.startswith("IBI") or filename.startswith("tags"):
+            file_path = os.path.join(directory, filename)
+            try:
+                os.remove(file_path) 
+                print(f"Deleted: {file_path}")
+            except Exception as e:
+                print(f"Error deleting {file_path}: {e}")
