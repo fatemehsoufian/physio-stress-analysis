@@ -3,7 +3,7 @@
 ## Branch Overview
 In this branch, we merged CSV files without applying any resampling strategy. The following Python files are included:
 
-### 🗂️ **Python Files and Their Functions**
+### **Python Files and Their Functions** 🗂️
 
 1. **extract.py**
    - Contains the `extract` function, which iterates over files to unzip all ZIP archives.
@@ -44,6 +44,24 @@ In this branch, we merged CSV files without applying any resampling strategy. Th
    - Apply resampling strategies (downsampling, aggregations, etc.)
 
 ---
-### **Next Steps**
+## Unifying Sampling Rates ⏳
+
+- **Downsampling:** Calculate the Greatest Common Divisor (GCD) for a new sampling rate.
+  - **Issue:** Reduces data size, leading to loss of information.
+- **Oversampling:** Calculate the Least Common Multiple (LCM) for a new sampling rate.
+  - **Issue:** Increases data size, requiring more processing time.
+
+
+| Signal      | Signal_code | Frequecy(Hz)|
+| ----------- | ----------- | ----------- |
+| Heart Rate  | HR | 1.0 |
+| Electrodermal Activity   | EDA | 4.0 |
+| Skin Temperature   | TEMP | 4.0 |
+| Accelerometer   | ACC | 32.0 |
+| Inter-Beat Interval   | IBI | 64.0 |
+| Blood Volume Pulse   | BVP | 64.0 |
+
+---
+##  Next Steps 🚀
 - Need an optimal resampling strategy to reduce data volume while preserving meaningful information. 
 - Determining appropriate sampling intervals for different physiological signals. ⏲️
