@@ -37,8 +37,11 @@ def resample_dataframe(data_file):
             resampled_df["Nurse ID"] = nurse_id  # Assign back the original ID
         
         case _ if file_name.startswith("TEMP") or file_name.startswith("EDA"):
+            nurse_id = data_df["Nurse ID"].iloc[0]
             # TEMP (4 Hz) and EDA (4 Hz) -> Do nothing, return the original DataFrame unchanged
             resampled_df = data_df
+            resampled_df["Nurse ID"] = nurse_id  # Assign back the original ID
+
         case _:
             return "Invalid data file"
 
