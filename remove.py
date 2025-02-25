@@ -1,9 +1,7 @@
 import os
 import shutil
 
-def remove_subfolders():
-
-    root_dir = "dmp-dataset/Stress_dataset"
+def remove_subfolders(root_dir):
     counter = 1  
 
     # Move and rename CSV files
