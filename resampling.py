@@ -27,7 +27,7 @@ def resample_dataframe(data_file):
         case _ if file_name.startswith("HR"):
             nurse_id = data_df["Nurse ID"].iloc[0]
             # HR (Heart Rate) is originally at 1 Hz -> upsample to 4 Hz using interpolation
-            resampled_df = data_df.resample(resample_interval).interpolate(method='time')
+            resampled_df = data_df.resample(resample_interval).interpolate(method='linear')
             resampled_df["Nurse ID"] = nurse_id  # Assign back the original ID
         
         case _ if file_name.startswith("ACC") or file_name.startswith("BVP"):
